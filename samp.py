@@ -6,7 +6,6 @@ import boto3
 
 def lambda_handler(event, context):
     s3 = boto3.client('s3')
-    g=Github("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")
     target_repo = "gitawstestmigrate/testproj"
     repo = g.get_repo(target_repo)
     contents = repo.get_contents("")
